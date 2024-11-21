@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flame-Shop🎄</title>
+    <link rel="icon" href="../material/logo/logo.png" type="image/png">
+
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="./material/logo/logo.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Wet+Paint&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&family=Rubik+Wet+Paint&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arima:wght@100..700&family=Oxanium:wght@200..800&family=Rubik+Wet+Paint&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arima:wght@100..700&family=Oswald:wght@200..700&family=Oxanium:wght@200..800&family=Rubik+Wet+Paint&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arima:wght@100..700&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Oswald:wght@200..700&family=Oxanium:wght@200..800&family=Rubik+Wet+Paint&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arima:wght@100..700&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Oswald:wght@200..700&family=Oxanium:wght@200..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik+Wet+Paint&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo"><a href="#main">Flame-Shop🎄</a></div>
+    </header>
+
+    <main>
+        <div class="product-container">
+            <div class="product-image">
+                <!-- Слайдер для фотографій -->
+                <div class="slider">
+                    <img src="../material/shtoriger/shtoriger1.png" alt="gershtore1" class="slide active">
+                    <img src="../material/shtoriger/shtoriger2.png" alt="gershore2" class="slide">
+                    <img src="../material/shtoriger/shtoriger3.png" alt="gershote3" class="slide">
+                    <div class="navigation">
+                        <button id="prev" class="nav-btn">❮</button>
+                        <button id="next" class="nav-btn">❯</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-details">
+                <img src="../material/top.png" alt="Top image" class="top-image">
+                <h1>Гирлянда штора</h1>
+                <p class="price">
+                    <span class="new-price pricedisplay" id="priceDisplay">150 ₴</span>
+                    <!-- <span class="old-price">349 ₴</span> -->
+                </p>
+                <form id="buy">
+                    <button class="buy-btn" id="buy">Купити</button>
+                </form>
+                
+                <div class="divider"></div>
+
+
+                <div class="span-options-div">
+                    <span class="">Довжина:</span>
+                </div>
+
+
+                <div class="length-options">
+                    <!-- Метр в script.js -->
+                    <div class="length-option selected" data-length="1Mx3M" data-price="150">1Mx3M</div>
+                    <div class="length-option" data-length="2Mx3M" data-price="250">2Mx3M</div>
+                    <div class="length-option" data-length="3Mx3M" data-price="350">3Mx3M</div>
+                </div>
+
+                <div class="span-options-div">
+                    <span>Колір:</span>
+                </div>
+
+                <div class="color-options">
+                    <div class="color-option selected" data-color="Теплий Білий" id="color-warm-white">Теплий білий</div>
+                    <div class="color-option" data-color="Білий" id="color-white">Білий</div>
+                </div>
+
+
+                <h2 class="more-inf">Додаткова інформація</h2>
+                <ul class="warranty-options">
+                    <li>
+                        Це зображення демонструє світлодіодну гірлянду на тонкому дроті, яка працює від батарейок, розміщених у прозорому батарейному блоці з трьома батарейками (формату AA).
+                    </li>
+                    <li>
+                        Світлодіоди випромінюють тепле, приємне світло, створюючи атмосферу затишку. 
+                        Гірлянда доступна в різних довжинах, таких як 2, 5 і 10 метрів, 
+                        що дозволяє використовувати її як для прикрашання невеликих, 
+                        так і для більш просторих кімнат
+                    </li>
+                    <li>
+                        Ця гірлянда додасть тепла і комфорту вашій оселі, 
+                        ідеально підходить для створення романтичної або святкової атмосфери.
+                        Наприклад Новий рік
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <!-- Ліва частина -->
+            <div class="left-section">
+                <p class="policy">
+                    © <span class="gray">2023</span> <span class="white">FLAMESHOP</span>
+                </p>
+                <span class="number">+380955044513</span><p>
+                <span class="author">by Andriy Shak</span>
+            </div>
+    
+            <!-- Центральна частина -->
+            <div class="center-section">
+                <img src="../material/logo/lamp-footer1.png" alt="Flame Logo" class="lamp-icon">
+            </div>
+    
+            <!-- Права частина -->
+            <div class="right-section">
+                <div class="social-icons">
+                    <a href="#"><img src="../icons/facebook-ico.png" alt="Facebook"></a>
+                    <a href="#"><img src="../icons/instagram-ico.png" alt="Instagram"></a>
+                    <a href="#"><img src="../icons/tiktok-logo.png" alt="TikTok"></a>
+                </div>
+            </div>
+            
+        </div>
+    </footer>
+
+    <script>
+        function copyText() {
+            // Отримуємо текст з елемента
+            const number = '+380 95 504 45 13';
+
+            // Копіюємо текст у буфер обміну
+            navigator.clipboard.writeText(number).then(() => {
+                // Показуємо сповіщення
+                const notification = document.getElementById("notification");
+                notification.classList.add("show");
+
+                // Ховаємо сповіщення через 2 секунди
+                setTimeout(() => {
+                    notification.classList.remove("show");
+                }, 2000);
+            }).catch(err => {
+                console.error("Помилка копіювання: ", err);
+            });
+        }
+    </script>
+
+
+
+<div id="modal">
+    <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h2>Інформація про товар</h2>
+        <p>Довжина: <span id="productLength">1M</span></p>
+        <p>Колір: <span id="productColor">Червоний🟥</span></p>
+        <p>Ціна: <span id="productPrice">200</span><span> ₴</span></p>
+        <button class="buy-button-modal" id="button-end-buy">Підтвердити покупку</button>
+    </div>
+</div>
+    <script src="script-product1.js"></script>
+</body>
+</html>

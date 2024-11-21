@@ -1,0 +1,724 @@
+body {
+    font-family: "Oswald", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f3f3f3;
+}
+
+p {
+    font-family: "Oswald", sans-serif;
+}
+
+
+
+
+
+
+main {
+    padding: 25px;
+    margin-bottom: 16px;
+}
+
+
+.divider {
+    width: 100%;
+    height: 1px;
+    background-color: black;
+    margin: 20px 0;
+}
+
+
+header {
+    display: flex;
+    padding: 10px 20px;
+    background-color: #222;
+    color: white;
+    align-items: center;
+}
+
+header .logo a { 
+    font-family: "Arima", system-ui;
+}
+
+header .logo a {
+    font-family: "Arima", system-ui;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+}
+
+/* Стиль для навігаційного меню */
+nav ul {
+    list-style: none; /* Видаляємо маркери списку */
+    padding: 0; /* Вимикаємо відступи */
+    margin: 0; /* Вимикаємо зовнішні відступи */
+}
+
+nav ul li {
+    display: inline; /* Відображаємо елементи списку в рядок */
+    margin: 0 15px; /* Відстань між елементами */
+}
+
+nav ul li a {
+    color: white; /* Колір тексту посилань */
+    text-decoration: none; /* Без підкреслення */
+    font-size: 16px; /* Розмір шрифту */
+}
+
+nav ul li a:hover {
+    text-decoration: underline; /* Підкреслення при наведенні */
+}
+
+.separator {
+    display: inline-block; /* Зберігаємо в рядку */
+    color: white; /* Колір роздільника */
+    font-size: 18px; /* Розмір шрифту для роздільника */
+    margin: 0 16px; /* Відстань навколо роздільника */
+}
+
+/* Контейнер для тексту */
+.container {
+    display: flex;
+    justify-content: center; /* Центруємо по горизонталі */
+    align-items: center; /* Центруємо по вертикалі */
+    height: 100vh; /* Висота вікна */
+    text-align: center; /* Центруємо текст */
+}
+
+
+
+
+
+.length-options {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
+.length-option {
+    position: relative;
+    padding: 10px 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    color: #333;
+    cursor: pointer;
+    font-weight: bold;
+    z-index: 1;
+    transition: color 0.3s, background-color 0.3s, border-color 0.3s;
+    flex: 1 1 calc(25% - 10px);
+    text-align: center;
+    background-color: transparent; /* Фон за замовчуванням прозорий */
+}
+
+.length-option.selected {
+    color: #fff;
+    background-color: #3498db; /* Фон для вибраної кнопки */
+    border-color: #3498db;
+}
+
+.length-option:hover {
+    color: #111;
+}
+
+
+
+
+
+
+
+.color-options {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
+.color-option {
+    position: relative;
+    padding: 10px 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    color: #333;
+    cursor: pointer;
+    font-weight: bold;
+    z-index: 1;
+    transition: color 0.3s, background-color 0.3s, border-color 0.3s;
+    flex: 1 1 calc(25% - 10px);
+    text-align: center;
+    background-color: transparent; /* Фон за замовчуванням прозорий */
+}
+
+.color-option.selected {
+    color: #fff;
+    background-color: #3498db; /* Фон для вибраної кнопки */
+    border-color: #3498db;
+}
+
+.color-option-red.selected {
+    color: #fff;
+    background-color: #3498db; /* Фон для вибраної кнопки */
+    border-color: #3498db;
+}
+
+
+.color-option:hover {
+    color: #111;
+}
+
+@media (max-width: 600px) {
+    .color-option {
+        flex: 1 1 calc(50% - 10px);
+    }
+}
+
+@media (max-width: 400px) {
+    .color-option {
+        flex: 1 1 100%;
+    }
+}
+
+
+.span-options-div {
+    font-family: "Oswald", sans-serif;
+    font-size: 18px;
+}
+
+
+
+
+
+
+
+
+
+.slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: #3498db; /* Колір повзунка */
+    border-radius: 5px;
+    z-index: 0;
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+.product-image {
+    position: relative;
+    width: 75%; /* Ширина слайдера */
+    overflow: hidden; /* Сховати все, що виходить за межі */
+}
+
+/* Адаптивність */
+@media (max-width: 600px) {
+    .length-option {
+        flex: 1 1 calc(50% - 10px);
+    }
+    .span-options-div{
+        margin-bottom: 20px;
+    }
+    .product-image {
+        width: auto;
+        height: auto;
+    }
+}
+
+@media (max-width: 400px) {
+    .length-option {
+        flex: 1 1 100%;
+    }
+}
+
+
+
+
+
+
+
+.product-container {
+    display: flex;
+    padding: 20px;
+    background-color: #fff;
+}
+
+
+
+.slider {
+    position: relative;
+    width: auto; /* Ширина слайдера */
+    height: auto;
+    display: flex; /* Використовуємо флекс для горизонтального розташування слайдів */
+    transition: transform 0.5s ease; /* Плавна анімація для переходу між зображеннями */
+}
+
+
+.slide {
+    min-width: 100%; /* Кожен слайд займає всю ширину слайдера */
+    display: none; /* Сховати всі слайди спочатку */
+}
+
+.slide.active {
+    display: block; /* Показати активний слайд */
+}
+
+@media (max-width: 600px) {
+    .slider img {
+        max-height: 300px; /* Зменшена висота для мобільних пристроїв */
+    }
+}
+
+.navigation {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.nav-btn {
+    background-color: rgba(255, 255, 255, 0.7);
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    margin: 2px;
+    padding: 8px;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+}
+
+.nav-btn:hover {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+
+
+
+.problems_is {
+    margin-top: 10px;
+    font-size: 1.1em;
+}
+
+/* Стиль для тексту */
+#textToCopy {
+    cursor: pointer;
+    font-size: 1em;
+    padding: 5px;
+    position: relative; /* Для позиціювання підказки */
+}
+
+#textToCopy:hover {
+    color: #333;
+}
+
+/* Стиль для підказки */
+.tooltip {
+    font-family: "Kanit", sans-serif;    
+    font-size: 0.8em;
+    position: absolute;
+    bottom: 100%; /* Розміщуємо підказку вище тексту */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none; /* Щоб підказка не перешкоджала клікам */
+    z-index: 1000;
+}
+
+/* Показуємо підказку при наведенні */
+#textToCopy:hover .tooltip {
+    opacity: 1;
+}
+
+/* Стиль для сповіщення */
+.notification {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%); /* Центруємо по горизонталі */
+    background-color: rgba(53, 59, 53, 0.9); /* Трохи прозорий фон */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Плавна анімація */
+    z-index: 1000;
+    transform: translateY(-20px); /* Зсув вгору для випливання */
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(0); /* Зворотний зсув для випливання */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.product-details {
+    font-family: "Roboto", sans-serif;
+    margin-left: 30px;
+}
+
+.price {
+    font-size: 24px;
+    color: #333;
+}
+
+.old-price {
+    text-decoration: line-through;
+    color: #838383;
+    margin-left: 10px;
+    font-size: 20px;
+}
+
+.new-price {
+    color: #000000;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.buy-btn {
+    display: inline-block;
+    margin: 10px 5px;
+    padding: 13px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    font-size: 25px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.buy-btn:hover {
+    background-color: #005ebd;
+}
+
+.more-inf {
+    margin-left: 10px;
+}
+
+.warranty-options li {
+    margin-bottom: 10px;
+}
+
+
+
+
+
+footer {
+    background-color: #000;
+    color: white;
+    padding: 2em 0;
+    font-family: Arial, sans-serif;
+    font-size: 1em;
+}
+
+/* Контейнер для футера */
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2%;
+}
+
+/* Ліва частина (© 2023 BLACKPIZZA) */
+.left-section p {
+    margin: 0;
+    font-size: 0.9em;
+    color: #888;
+}
+
+/* Центральна частина (Логотип) */
+.center-section img {
+    max-height: 50px; /* Розмір логотипа */
+}
+
+/* Права частина (Соцмережі) */
+.right-section .social-icons {
+    display: flex;
+    gap: 20px;
+}
+
+.right-section .social-icons a img {
+    max-width: 25px; /* Розмір іконок соцмереж */
+    filter: invert(100%); /* Робимо їх білими */
+}
+
+.right-section .social-icons a img:hover {
+    opacity: 0.8; /* Затемнення при наведенні */
+}
+
+.policy {
+    font-weight: bold;
+}
+.white {
+    color: #fff;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+
+.lamp-icon {
+    filter: invert(100%) brightness(200%);
+    width: 50px; 
+    height: auto;
+}
+
+
+
+.social-icons {
+    margin-top: 1em;
+    display: flex;
+    justify-content: center;  
+}
+
+.social-icons a {
+    margin: 0 10px;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.social-icons a:hover {
+    background-color: darkorange;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+}
+
+.social-icons img {
+    width: 20px;
+    height: 20px;
+    filter: invert(100%);  
+    transition: filter 0.3s ease;
+}
+
+.social-icons a:hover img {
+    filter: invert(100%);  
+}
+
+/* Додаємо медіа-запит для мобільних пристроїв */
+@media (max-width: 600px) {
+    .product-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product-image img {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+    }
+
+    .product-details {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .product-details h1 {
+        margin-top: 20px;
+        font-size: 24px;
+    }
+
+    .buy-btn {
+        width: 80%;
+        font-size: 20px;
+        padding: 10px;
+    }
+
+    .warranty-options {
+        padding: 0 20px;
+        text-align: left;
+    }
+}
+
+
+
+
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+
+/* Бігунок */
+::-webkit-scrollbar-thumb {
+    background-color: orange;
+    border-radius: 10px;
+    transition: all 0.3s ease; /* Додаємо плавний перехід для ефекту */
+}
+
+/* Фон треку */
+::-webkit-scrollbar-track {
+    background-color: #333;
+    border-radius: 5px;
+}
+
+/* Ефект збільшення при наведенні */
+::-webkit-scrollbar-thumb:hover {
+    background-color: darkorange;
+    box-shadow: 0 0 5px darkorange; /* Додаємо тінь для імітації збільшення */
+    transform: scale(1.5); /* Масштабування */
+    border-radius: 12px; /* Трохи більший радіус */
+}
+
+
+
+
+
+
+
+
+.slider-container {
+    display: flex;
+    position: relative;
+}
+
+.slide {
+    display: none;
+    width: 100%;
+}
+
+.slide.active {
+    display: block;
+}
+
+#prev, #next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 5px 10px;
+}
+
+#prev { left: 10px; }
+#next { right: 10px; }
+
+
+
+
+
+
+
+
+
+#modal {
+    display: none; /* приховано за замовчуванням */
+    visibility: hidden; /* Запобігає показу навіть на мить */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    font-size: 20px;
+    border-radius: 8px;
+    max-width: 400px;
+    width: 80%;
+    text-align: center;
+    position: relative; /* Для позиціювання кнопки закриття */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Додає тінь для кращої видимості */
+}
+
+.close-btn {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 30px;
+    margin-right: 10px;
+}
+
+.close-btn:hover {
+    color: #676767;
+}
+
+
+
+.buy-button-modal {
+    font-family: "Oswald", sans-serif;;
+    display: inline-block;
+    margin: 10px 5px;
+    padding: 13px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    font-size: 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.buy-button-modal:hover {
+    background-color: #005ebd;
+}
+
+
+
+.top-image {
+    position: absolute;
+    width: 15%;
+    height: auto;
+    top: 33px; 
+    left: 41%;
+    transform: translateX(-50%);
+}
+
+
+@media (max-width: 600px) {
+ .top-image{
+    width: 37%;
+    top: 25px; 
+    left: 26%;
+ }   
+}
