@@ -131,7 +131,7 @@ document.getElementById('orderForm').addEventListener('submit', async function(e
 
       if (response.ok) {
           alert('Замовлення успішно відправлене!');
-          window.location.href = 'https://qwarkod.github.io/ATLANT-shop/other/index.html';
+          window.location.href = 'https://qwarkod.github.io/FlameShopV3/other/index.html';
       } else {
           alert('Сталася помилка при відправці замовлення.');
       }
