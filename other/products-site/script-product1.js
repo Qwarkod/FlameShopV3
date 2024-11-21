@@ -180,7 +180,7 @@ const endBuyButton = document.querySelector('.buy-button-modal');
 endBuyButton.addEventListener('click', (e) => {
   e.preventDefault();
 
-  window.location.href = `https://SITE/?product=1&productName=Герлянда-Штора&Length=${lengthString}&Price=${selectedPrice}&Color=${colorString}`;
+  window.location.href = `https://qwarkod.github.io/FlameShopV3/public/index.html?product=1&productName=Герлянда-Штора&Length=${lengthString}&Price=${selectedPrice}&Color=${colorString}`;
 
   // ?product=1&productName=Герлянда-Штора&Length=5m&Price=200&Color=red
 });
